@@ -1,0 +1,82 @@
+/*tags principales*/
+html {
+    font-size:6.25%;
+}
+* {
+    font-family:  'Noto Sans JP', sans-serif, Arial;
+    box-sizing:border-box;
+    margin: 0px;
+    padding: 0px;
+}
+h1 {
+    font-size: 20rem;
+}
+a {
+    color: #2E2A29;
+    text-decoration: none;
+    font-size: 14rem;
+}
+p {
+    font-size: 14rem;
+}
+
+
+/*Menu*/
+.menu {
+    list-style: none;
+    padding-left: 0px;
+    background-color: #FD492C;
+    font-size: 16rem;
+}
+.menu__item {
+    display: inline-block;
+    padding: 10px;
+}
+.menu__item:hover {
+    background-color: #F69B3A;
+}
+.menu__item a {
+    color: #FFFFFF;
+}
+
+/*Card magia CSS*/
+.cards {
+    width: 90vw;
+    min-width: 320px;
+    max-width: 1024px;
+    background: cadetblue;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 23rem;
+}
+.cards__cardTip {
+    width: calc(33% - 16px);
+    min-width: 290px;
+    padding: 5px;
+    border-radius: 8px;
+    border: solid 1px #EFAD53;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 30px;
+    display: inline-block;
+    font-size: 14rem;
+    min-height: 80px;
+}
+.cards__cardTip:nth-of-type(3n + 1){
+    margin-left: 23rem;
+}
+.cards__cardTip:hover{
+    box-shadow: 2px 2px 4px 0.2px #EFAD53;
+}
+.cards__cardTip:before {
+    content: "TIP";
+    position: relative;
+    top: -16px;
+    left: calc(50% - 5px);
+    background: black;
+    color: #FFFFFF;
+    padding: 10px;
+}
+.cards__cardTip p {
+    min-height: 80px;
+}
