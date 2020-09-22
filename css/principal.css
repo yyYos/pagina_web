@@ -1,4 +1,11 @@
 /*tags principales*/
+:root {
+    --color-base: #FFFFFF;
+    --color-menu: #FD492C;
+    --color-cards: #F69B3A;
+    --color-cards-claro: #FEBE5D;
+    --color-codigo: #053E61;
+}
 html {
     font-size:6.25%;
 }
@@ -7,6 +14,7 @@ html {
     box-sizing:border-box;
     margin: 0px;
     padding: 0px;
+    font-size: 14rem;;
 }
 h1 {
     font-size: 20rem;
@@ -18,6 +26,10 @@ a {
 }
 p {
     font-size: 14rem;
+    margin-block-end: 10rem;
+}
+.title_pag {
+    
 }
 
 
@@ -25,58 +37,91 @@ p {
 .menu {
     list-style: none;
     padding-left: 0px;
-    background-color: #FD492C;
+    background-color: var(--color-menu);
     font-size: 16rem;
 }
-.menu__item {
+.menu li {
     display: inline-block;
     padding: 10px;
+    text-align: center;
 }
-.menu__item:hover {
-    background-color: #F69B3A;
+.menu li:hover {
+    background-color: var(--color-cards);
 }
-.menu__item a {
-    color: #FFFFFF;
+.menu a {
+    color: var(--color-base);
 }
 
 /*Card magia CSS*/
 .cards {
-    width: 90vw;
+    width: 94vw;
     min-width: 320px;
     max-width: 1024px;
     background: cadetblue;
     position: relative;
     margin: 0 auto;
+    padding-top: 30rem;
     padding-bottom: 23rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-.cards__cardTip {
+.cards__item {
     width: calc(33% - 16px);
     min-width: 290px;
     padding: 5px;
     border-radius: 8px;
-    border: solid 1px #EFAD53;
+    border: solid 1px var(--color-cards-claro);
+    background: var(--color-cards-claro);
     margin-left: 4px;
     margin-right: 4px;
-    margin-top: 30px;
-    display: inline-block;
-    font-size: 14rem;
+    margin-top: 9px;
     min-height: 80px;
+    flex-basis: 10rem;
+    flex-grow: 1;
 }
-.cards__cardTip:nth-of-type(3n + 1){
-    margin-left: 23rem;
+.cards__item:hover{
+    
 }
-.cards__cardTip:hover{
-    box-shadow: 2px 2px 4px 0.2px #EFAD53;
-}
-.cards__cardTip:before {
+.item--tip:before {
     content: "TIP";
     position: relative;
     top: -16px;
-    left: calc(50% - 5px);
-    background: black;
-    color: #FFFFFF;
-    padding: 10px;
+    left: calc(4% - 5px);
+    background: #A23BAF;
+    color: var(--color-base);
+    padding: 7rem;
+    font-size: 16rem;
 }
-.cards__cardTip p {
+.item--info:before {
+    content: "INFO";
+    position: relative;
+    top: -16px;
+    left: calc(4% - 5px);
+    background: #22C000;
+    color: var(--color-base);
+    padding: 7rem;
+    font-size: 16rem;
+}
+.cards__cardImfo {
+    content: "INFO";
+    position: relative;
+    top: -16px;
+    left: calc(4% - 5px);
+    background: #2EB7D6;
+    color: var(--color-base);
+    padding: 7rem;
+    font-size: 16rem;
+}
+.cards__item p {
     min-height: 80px;
+    line-height: 18rem;
+}
+.codigo-ej {
+    background: var(--color-codigo);
+    color: var(--color-base);
+    padding: 5px;
+    font-size: 12rem;
 }

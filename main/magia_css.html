@@ -10,26 +10,42 @@
     <body>
         <header>
             <nav>
-                <h1>Estilos relevantes</h1>
                 <ul class="menu">
+                    <li class="title_pag"><h1>curiOffice / curiOffeCity</h1></li>
                     <li class="menu__item"><a href="./magia_css.html">Magia con CSS3</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section class="cards">
-                <article class="cards__cardTip">
-                    <p>Quitar BULLET de una lista desordenada </p>
-                    <p>.list { list-style: none; }</p>
+                <article class="cards__item item--tip">
+                    <p>Un bullet es el punto que aparece en una lista desordenada, con el siguiente estilo lo quitaremos</p>
+                    <pre class="codigo-ej">
+        .list { 
+            list-style: none; 
+        }
+                    </pre>
                 </article>
-                <article class="cards__cardTip">
+                <article class="cards__item item--tip">
                     <p>Suma el valor de pixeles width, padding, border, excepto margin y se adapta al width que tengamos establecido sin ocupar espacio adicional</p>
-                    <p>* { box-sizing:border-box; }</p>
+                    <pre class="codigo-ej">
+        * { 
+            box-sizing:border-box; 
+        }
+                    </pre>
                 </article>
-                <article class="cards__cardTip">
-                    <p>Suma el valor de pixeles width, padding, border, excepto margin y se adapta al width que tengamos establecido sin ocupar espacio adicional</p>
-                    <p>* { box-sizing:border-box; }</p>
+                <article class="cards__item item--info">
+                    <p>Flexbox: Trata sobre la alineación de contenedores.NOTA para este efecto el contenedor padre debe tener display:flex. <br>
+                        Los contenedores hijos llevaran ciertas propiedades con el fin de trabajar con estilo responsivo</p>
+                    <pre class="codigo-ej">
+        .contenedorPadre { 
+            dipslay:flex 
+        }
+                    </pre>
                 </article>
+            </section>
+            <section class="cards">
+
             </section>
         </main>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
