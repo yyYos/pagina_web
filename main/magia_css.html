@@ -6,20 +6,24 @@
         <meta name="robots" content="index, follow">
         <meta name="viewport" content="width=divece-width, initial-scale=1.0">
         <title>Magia con CSS</title>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/principal.css"/>
     </head>
     <body>
         <header>
             <nav>
                 <ul class="menu">
-                    <li class="title_pag"><h1>curiOffice / curiOffeCity</h1></li>
-                    <li class="menu__item"><a href="./magia_css.html">Magia con CSS3</a></li>
+                    <li class=""><h2>curiOffice / curiOffeCity</h2></li>
+                    <li class="menu__item menu__activo"><a href="#">Magia con CSS3</a></li>
+                    <li class="menu__item"><a href="./patrones_maquetacion.html">Patrone de maquetación</a></li>
                 </ul>
             </nav>
         </header>
         <main>
+            <div class="titulo-principal"><h1>Tips web´s</h1></div>
             <section class="cards">
                 <article class="cards__item item--tip">
-                    <p>Un bullet es el punto que aparece en una lista desordenada, con el siguiente estilo lo quitaremos</p>
+                    <p>Un bullet es el punto que aparece en una lista desordenada, con el siguiente estilo lo quitaremos.</p>
                     <pre class="codigo-ej">
         .list { 
             list-style: none; 
@@ -27,28 +31,66 @@
                     </pre>
                 </article>
                 <article class="cards__item item--tip">
-                    <p>Suma el valor de pixeles width, padding, border, excepto margin y se adapta al width que tengamos establecido sin ocupar espacio adicional</p>
-                    <pre class="codigo-ej">
+                    <p><b>box-sizing</b> suma el valor de pixeles width, padding, border, excepto margin y se adapta al width que tengamos establecido sin ocupar espacio adicional.</p>
+                    <pre class="codigo-ej buena-practica">
         * { 
             box-sizing:border-box; 
         }
                     </pre>
                 </article>
+                <article class="cards__item item--tip">
+                    <p><b>Etiqueta picture</b> ayuda al rendimiento y descarga de la imagen sin tener que acudir a css, esta tambien ocupa media queries, que es el punto donde la imagen se mostrara. NOTA solo tienes que preocuparte por el contenedor de esta imagen(epecifica un width).</p>
+                    <pre class="codigo-ej buena-practica">
+        picture
+            source srcset="rutaImagen" media="(expresion)"
+            img src="rutaImagenMobile" alt="Descripcion"
+        picture
+                    </pre>
+                </article>
+                <article class="cards__item item--tip">
+                    <p><b>REM</b> representa un tamaño de fuente relativo a el valor de la fuente del elemento html o root, esto quiere decir que no importa en que dispositivo te encuentres 1rem equivale al valor que tenga la etiqueta html en ese momento.
+                        <br>Si el tamaño de fuente en html es de 16px(que es lo mas usual en navegadores) entonces 1rem = 16px, si cambiamos a 6.25% entonces 1rem = 1px
+                    </p>
+                    <pre class="codigo-ej buena-practica">
+        html {
+            font-size:6.25%;
+        }
+                    </pre>
+                </article>
                 <article class="cards__item item--info">
-                    <p>Flexbox: Trata sobre la alineación de contenedores.NOTA para este efecto el contenedor padre debe tener display:flex. <br>
-                        Los contenedores hijos llevaran ciertas propiedades con el fin de trabajar con estilo responsivo</p>
+                    <p><b>PX y EM</b> representan un tamaño de fuente. 
+                        <br>PX es una medida absoluta, quiere decir que no cambiara en ningun tamaño de patalla, este se vuelve un problema para elementos que necesitamos sean responsivos, sumando una desventaja con el navegador si es que el usuario tiene problemas visuales, al agregar la configuracion de letra mas grande y la medida es con px, este no cambiara.
+                        <br>EM aunque es una medida relativa, tiene la desventaja de seguir como paramatro principal el contenedor padre.
+                    </p>
+                </article>
+                <article class="cards__item item--info">
+                    <p><b>Flexbox</b> trata sobre la alineación de contenedores.NOTA para este efecto el contenedor padre debe tener display:flex. <br>
+                        Los contenedores hijos llevaran ciertas propiedades con el fin de trabajar con estilo responsivo.</p>
                     <pre class="codigo-ej">
         .contenedorPadre { 
             dipslay:flex 
         }
                     </pre>
                 </article>
-            </section>
-            <section class="cards">
-
+                <article class="cards__item item--info">
+                    <p><b>Media queries</b> son puntos de interrupcion donde se determinan los cambios de estilos en nuestro sitio web, esto da paso al diseño responsivo.<br>Estas reglas de CSS se deben encontrar hasta la ultima linea del archivo CSS<i>(buena practica)</i>.<br>Existen diferentes expresiones no solo para determinar el tamaño de la pantalla donde se quiera realizar el cambio.</p>
+                    <pre class="codigo-ej">
+        @media MediaTypes (expresion){
+            /*reglas usuales de CSS*/
+        }
+                    </pre>
+                </article>
+                <article class="cards__item item--tip">
+                    <p>Las <b>Media Queries</b> son ligeras de cargar para el navegador, si son pocas lineas, que pasa si son demasiadas lines de codigo para solo un punto de ruptura, lo mejor es tener un archivo por cada punto de ruptura (para mobile, tablet y desktop) esto para tener un mejor manejo de estilos y la carga de estilos ante el navegador sea mas rapida.La forma en que llamas a estos archivos desde html es la siguiente.</p>
+                    <pre class="codigo-ej buena-practica">
+        link href="nombreArchivo.css" rel="stylesheet" <br> 
+        media="screen and (min-width: 370px)"
+                    </pre>
+                </article>
+                <article class="cards__item item--tip">
+                    <p>El tamaño de la <b>pantalla mas pequeña</b> que hay es de 320px, si estas empezando una paginas web una forma de empezar y expertos comentan es por dispositivos moviles, este seria el tamaño minimo de tu ancho de pantalla.</p>
+                </article>
             </section>
         </main>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/principal.css"/>
     </body>
 </html>

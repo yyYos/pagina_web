@@ -28,28 +28,53 @@ p {
     font-size: 14rem;
     margin-block-end: 10rem;
 }
-.title_pag {
-    
-}
+.titulo-principal {
+    display: block;
+    margin: 15rem auto;
+    text-align: center;
 
+}
+.codigo-ej {
+    background: var(--color-codigo);
+    color: var(--color-base);
+    padding: 5px;
+    font-size: 12rem;
+}
+.buena-practica::after {
+    content: "buena practica";
+    font-size: 8rem;
+    padding: 4rem;
+    top: -55rem;
+    color: #E1E289;
+    position: relative;
+    left: calc(64% - 5rem);
+}
 
 /*Menu*/
 .menu {
     list-style: none;
     padding-left: 0px;
-    background-color: var(--color-menu);
+    /* background-color: var(--color-menu); */
     font-size: 16rem;
 }
 .menu li {
     display: inline-block;
-    padding: 10px;
+    padding: 0 4rem 0 5rem;
     text-align: center;
 }
-.menu li:hover {
+.menu [hover] {
     background-color: var(--color-cards);
 }
 .menu a {
-    color: var(--color-base);
+    color: black;
+    padding: 10rem;
+}
+/* .menu .menu__activo{
+    background-color: var(--color-cards);
+} */
+.menu .menu__activo a{
+    background-color: var(--color-cards);
+    color: #ffffff;
 }
 
 /*Card magia CSS*/
@@ -95,7 +120,7 @@ p {
     padding: 7rem;
     font-size: 16rem;
 }
-.item--info:before {
+.item--info::before {
     content: "INFO";
     position: relative;
     top: -16px;
@@ -118,10 +143,4 @@ p {
 .cards__item p {
     min-height: 80px;
     line-height: 18rem;
-}
-.codigo-ej {
-    background: var(--color-codigo);
-    color: var(--color-base);
-    padding: 5px;
-    font-size: 12rem;
 }
