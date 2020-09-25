@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="description" content="Patrones de maquetacion web">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Patrone de maquetación</title>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/principal.css"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li class=""><h2>curiOffice / curiOffeCity</h2></li>
+                    <li class="menu__item"><a href="./magia_css.html">Magia con CSS3</a></li>
+                    <li class="menu__item menu__activo"><a href="#">Patrones de maquetación</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="titulo-principal"><h1>Patrones de diseño web</h1></div>
+            <section class="cards">
+                <article class="cards__item">
+                    <label><b>Mostly Fluid</b></label>
+                    <p>Mobile First/Only consiste en apilar las columnas verticalmente conforma valla teniendo menos espacio la pagina web, eso se ve claramante si vas de desktop a mobile.<br>
+                        Una buena practica de este proceso es mandar a llamar cual archivo css voy a tomar desde el html, sin meternos con el archivo CSS, tendra como propiedad la media query donde sera el punto de interrupcion.
+                        <br>Un ejemplo de este patron <a href="https://www.dropbox.com/es/"></a>    
+                    </p>
+                    <pre class="codigo-ej  buena-practica">
+            link href="nombreArchivo.css" rel="stylesheet" <br> 
+            media="screen and (min-width: 370px)"
+                    </pre>
+                </article>
+                <article class="cards__item">
+                    <label><b>Layout shifter</b></label>
+                    <p>Esta es otro patron de diseño, realiza un desplazamiento del contenido, a diferencia de <i>Mostly Fluid</i> este tiene la idea de ordenar diferente las areas de tu contenido sin colocar una debajo de la otra. Este tiene mas puntos de ruptura. 
+                        <br>Un ejemplo de este patron<a href="https://github.com/">GitHub</a>
+                    </p>
+                </article>
+                <article class="cards__item">
+                    <label><b>Column form</b></label>
+                    <p>Para este patron, el contenido se apilan verticalmente hasta donde tu decidas que para esa fila existen los sufientes contenedores por consiguiente crearias otra fila y se trabaja igual, apilando verticalmente.
+                        <br>Un ejemplo de este patron <a href="https://www.smashingmagazine.com/">smashing magazine</a>
+                    </p>
+                </article>
+                <article class="cards__item">
+                    <label><b>Tiny tweaks</b></label>
+                    <p>Este patron de diseño web aplica para paginas de una sola columan, como son paginas informativas o articulos con mucho texto, los cambios mas usuales con este son menores, como tamaño de fuente, tamaño de imagene, cambios que no descontrolen la armonia de paginas</p>
+                </article>
+                <article class="cards__item">
+                    <label><b>Off Canvas</b></label>
+                    <p>Este muestra u oculta contenido, dependiendo el tamaño de pantalla, este cambio es mas visible en pantallas pequeñas ya que se tiene como idea principal es mostrar informacion importante para el usuario, en este patron puede ocultar por ej. imagenes o submenus, en vez de ver todo el menu principal tener una ambuerguesa para ocultar este campo.</p>
+                </article>
+                <article class="cards__item">
+                    <label><b>Grid layout</b></label>
+                    <p>PENDIENTE</p>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
